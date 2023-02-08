@@ -33,7 +33,7 @@ router.get("/notes/:id", async (req, res) => {
 router.post("/notes", async (req, res) => {
   try {
     if (!req.body.title || !req.body.text) {
-      return res.status(400).json({ error: "our note was not able to be posted. Please try again. Title and text are required fields" });
+      return res.status(400).json({ error: "Your note was not able to be posted. Please try again. Title and text are required fields" });
     }
     let newNote = {
       title: req.body.title,
